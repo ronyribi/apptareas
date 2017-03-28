@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1 Tareas
+    a(href='tasks/new') Añadir Tarea
+    div.well
+        each tarea, i in tareas
+            h3 #{tarea.nom}
+            p Etiquetes: #{tarea.etiquetes}
+            p Realització: #{tarea.realització}%
+            .progress
+                .progress-bar.progress-bar-success(role='progressbar', aria-valuemin='0', aria-valuemax='100', style='width:'+tarea.realització+'%')
+    

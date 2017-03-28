@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1 Añadir Tarea
+    form(action='/tasks/crear', method='post')
+      | Nom:
+      br
+      input(type='text', name='nom')
+      br
+      |   Etiquetes:
+      br
+      input(type='text', name='etiquetes')
+      br
+      |   Realització %:
+      br
+      input(type='text', name='realització')
+      br
+      br
+      input(type='submit', value='Añadir')
